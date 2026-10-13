@@ -1,0 +1,25 @@
+services:
+  db:
+    build: ./db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: "sixseven"
+      POSTGRES_DB: movies_db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  app:
+    build: ./app
+    ports:
+      - "8000:5000"
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: "sixseven"
+      DB_NAME: movies_db
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
