@@ -144,3 +144,4 @@ curl.exe http://localhost:8000/movies
 
 - Образ `movies-app` на Docker Hub: https://hub.docker.com/r/milashkarr/movies-app
 - Образ `movies-db` на Docker Hub: https://hub.docker.com/r/milashkarr/movies-db
+- Репозиторий на GitHub: https://github.com/milashkarr/docker-movies-app
